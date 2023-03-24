@@ -46,4 +46,7 @@ uwsgi --module core.wsgi:application --http 0.0.0.0:8000 --workers 10 --gevent 1
 bjcli core.wsgi -w 10 -i 0.0.0.0 -p 8000
 ```
 
+### Note
+Uncomment DJANGO_ALLOW_ASYNC_UNSAFE in core.wsgi when using gunicorn[tornado]
+
 ### To see full documentation follow this [link](https://medium.com/p/bfe453a6f7ad/edit)
