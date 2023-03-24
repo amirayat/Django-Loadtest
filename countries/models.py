@@ -19,7 +19,7 @@ class Country(models.Model):
     region = models.CharField(max_length=8, null=True)
     subregion = models.CharField(max_length=25, null=True)
     timezones = models.JSONField(default=list)
-    translations = models.JSONField(null=True)
+    translations = models.JSONField()
     latitude = models.CharField(max_length=12)
     longitude = models.CharField(max_length=13)
     emoji = models.CharField(max_length=2)
