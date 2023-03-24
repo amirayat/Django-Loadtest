@@ -49,4 +49,8 @@ bjcli core.wsgi -w 10 -i 0.0.0.0 -p 8000
 ### Note
 Uncomment DJANGO_ALLOW_ASYNC_UNSAFE in core.wsgi when using gunicorn[tornado]
 
+### Result
+![](./assets/time-per-request.png)
+![](./assets/requests-per-second.png)
+
 ### To see full documentation follow this [link](https://medium.com/p/bfe453a6f7ad/edit)
