@@ -31,7 +31,7 @@ gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 10 --worker-class [
 ``` 
 + Uvicorn
 ```bash
-uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --workers 10 --loop [asyncio|uvloop]
+uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --workers 10 --loop [asyncio|uvloop] --no-access-log
 ```
 + Hypercorn
 ```bash
@@ -39,7 +39,7 @@ hypercorn core.asgi:application --bind 0.0.0.0:8000 --workers 10 --worker-class 
 ```
 + uWSGI
 ```bash
-uwsgi --module core.wsgi:application --http 0.0.0.0:8000 --workers 10 --gevent 100
+uwsgi --module core.wsgi:application --http 0.0.0.0:8000 --workers 10 --gevent 100 --disable-logging
 ```
 + Bjoern
 ```bash
