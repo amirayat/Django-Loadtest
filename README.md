@@ -57,5 +57,10 @@ You can install Rust according to [this instruction](https://www.digitalocean.co
 
 
 ### Result
+5k requests
+
 ![](./assets/cpython-pypy-5k-requests.png)
+
+250k requests
+
 ![](./assets/cpython-pypy-250k-requests.png)
