@@ -1,6 +1,6 @@
 import os
-import psycopg2
-import psycopg2.extras
+import psycopg2cffi
+import psycopg2cffi.extras
 from dotenv import load_dotenv
 
 
@@ -15,14 +15,14 @@ DB_HOST = os.getenv('DB_HOST')
 DB_PORT = int(os.getenv('DB_PORT'))
 
 
-conn = psycopg2.connect(f"dbname='{DB_NAME}' user='{DB_USER}' host='{DB_HOST}' password='{DB_PASSWORD}'")
+conn = psycopg2cffi.connect(f"dbname='{DB_NAME}' user='{DB_USER}' host='{DB_HOST}' password='{DB_PASSWORD}'")
 
 
 def get_countries():
     """
     get all world countries using psycopg cursor 
     """
-    cur = conn.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+    cur = conn.cursor(cursor_factory = psycopg2cffi.extras.RealDictCursor)
     cur.execute(f"""SELECT * FROM {DB_TABLE}""")
     countries = cur.fetchall()
     return countries

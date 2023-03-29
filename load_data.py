@@ -1,8 +1,7 @@
 import os
 import json
-import psycopg2
-from psycopg2 import sql
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+import psycopg2cffi
+from psycopg2cffi.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,7 +12,7 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')
 DB_PORT = int(os.getenv('DB_PORT'))
 
-con = psycopg2.connect(
+con = psycopg2cffi.connect(
     dbname='postgres',
     user=DB_USER, 
     host=DB_HOST,
@@ -24,17 +23,7 @@ con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
 
 cur = con.cursor()
 
-cur.execute(
-    sql.SQL("DROP DATABASE IF EXISTS {}").format(
-        sql.Identifier(DB_NAME))
-    )
-
-cur.execute(
-    sql.SQL("CREATE DATABASE {}").format(
-        sql.Identifier(DB_NAME))
-    )
-
-con = psycopg2.connect(
+con = psycopg2cffi.connect(
     dbname=DB_NAME,
     user=DB_USER, 
     host=DB_HOST,
