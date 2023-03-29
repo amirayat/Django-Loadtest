@@ -16,7 +16,7 @@ Completed 5000 requests
 Finished 5000 requests
 
 
-Server Software:        
+Server Software:        gunicorn
 Server Hostname:        127.0.0.1
 Server Port:            8000
 
@@ -24,30 +24,30 @@ Document Path:          /countries/
 Document Length:        220950 bytes
 
 Concurrency Level:      100
-Time taken for tests:   29.755 seconds
+Time taken for tests:   6.050 seconds
 Complete requests:      5000
 Failed requests:        0
-Total transferred:      1105965000 bytes
+Total transferred:      1106680000 bytes
 HTML transferred:       1104750000 bytes
-Requests per second:    168.04 [#/sec] (mean)
-Time per request:       595.091 [ms] (mean)
-Time per request:       5.951 [ms] (mean, across all concurrent requests)
-Transfer rate:          36298.44 [Kbytes/sec] received
+Requests per second:    826.38 [#/sec] (mean)
+Time per request:       121.010 [ms] (mean)
+Time per request:       1.210 [ms] (mean, across all concurrent requests)
+Transfer rate:          178620.34 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.1      0       3
-Processing:    41  587  99.6    555     794
-Waiting:       38  586  99.5    554     793
-Total:         42  587  99.6    555     794
+Connect:        0    1   3.9      0      30
+Processing:    16  118  20.9    112     348
+Waiting:       16  118  20.8    112     347
+Total:         31  119  20.8    112     348
 
 Percentage of the requests served within a certain time (ms)
-  50%    555
-  66%    669
-  75%    682
-  80%    690
-  90%    708
-  95%    722
-  98%    737
-  99%    749
- 100%    794 (longest request)
+  50%    112
+  66%    118
+  75%    123
+  80%    128
+  90%    143
+  95%    157
+  98%    184
+  99%    198
+ 100%    348 (longest request)

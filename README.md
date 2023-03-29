@@ -1,7 +1,7 @@
 ## World Countries
 ### Django rest api
 
-Simple Application to test performance of Django together with pythonic webservers.
+Simple Application to test performance of Django cache.
 
 ### Required development packages on Ubuntu
 ```bash
@@ -20,37 +20,20 @@ DB_PASSWORD = ***
 DB_HOST = ***
 DB_PORT = ***
 
+REDIS_HOST= ***
+REDIS_PORT= ***
+
+MEMCACHED_HOST= ***
+MEMCACHED_PORT= ***
+
 DJANGO_SECRET = ***
 ALLOWED_HOSTS = *
 ```
 
 ### Deployment commands
-+ Gunicorn
 ```bash
-gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 10 --worker-class [eventlet|gevent|tornado|gthread] 
+gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 10
 ``` 
-+ Uvicorn
-```bash
-uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --workers 10 --loop [asyncio|uvloop] --no-access-log
-```
-+ Hypercorn
-```bash
-hypercorn core.asgi:application --bind 0.0.0.0:8000 --workers 10 --worker-class [asyncio|uvloop] 
-```
-+ uWSGI
-```bash
-uwsgi --module core.wsgi:application --http 0.0.0.0:8000 --workers 10 --gevent 100 --disable-logging
-```
-+ Bjoern
-```bash
-bjcli core.wsgi -w 10 -i 0.0.0.0 -p 8000
-```
-
-### Note
-Uncomment DJANGO_ALLOW_ASYNC_UNSAFE in core.wsgi when using gunicorn[tornado]
 
 ### Result
-![](./assets/time-per-request.png)
-![](./assets/requests-per-second.png)
-
-### To see full documentation follow this [link](https://medium.com/p/bfe453a6f7ad/edit)
+![](./assets/django-cache.png)

@@ -22,6 +22,12 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')
 DB_PORT = int(os.getenv('DB_PORT'))
 
+REDIS_HOST = os.getenv('REDIS_HOST')
+REDIS_PORT = os.getenv('REDIS_PORT')
+
+MEMCACHED_HOST = os.getenv('MEMCACHED_HOST')
+MEMCACHED_PORT = os.getenv('MEMCACHED_PORT')
+
 DJANGO_SECRET = os.getenv('DJANGO_SECRET')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 
@@ -161,3 +167,13 @@ REST_FRAMEWORK = {
 if DEBUG:
     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"].append(
         "rest_framework.renderers.BrowsableAPIRenderer")
+
+
+CACHES = {
+    'default': {
+        # 'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        # 'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}',
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'LOCATION': f'{MEMCACHED_HOST}:{MEMCACHED_PORT}',
+    }
+}
