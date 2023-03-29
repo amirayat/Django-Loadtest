@@ -1,1 +1,2 @@
-Python 3.8.10
+Python 3.9.16 (7.3.11+dfsg-1~ppa1~ubuntu20.04, Dec 30 2022, 13:49:04)
+[PyPy 7.3.11 with GCC 9.4.0]

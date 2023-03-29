@@ -1,14 +1,25 @@
 ## World Countries
 ### Django rest api
 
-Simple Application to test performance of Django together with pythonic webservers.
+Simple Application to test performance of Django with pypy3.
 
 ### Required development packages on Ubuntu
 ```bash
+add-apt-repository ppa:pypy/ppa
+apt update
+apt install pypy3
+apt-get install pypy3-dev
 apt-get install python3-dev
 apt-get install libpq-dev
 apt-get install libev-dev
 apt-get install gcc
+```
+
+### Project requirements
+```bash
+pypy3 -m venv venv
+(venv) pypy3 -m pip install --upgrade setuptools
+(venv) pypy3 -m pip install -r requirements.txt
 ```
 
 ### .env 
@@ -24,33 +35,22 @@ DJANGO_SECRET = ***
 ALLOWED_HOSTS = *
 ```
 
+### Django database adapter changes from psycopg2 to psycopg2cffi
+Replace psycopg2 to psycopg2cffi in these modules:
+- /django/db/backends/postgresql/base.py
+- /django/db/backends/postgresql/creation.py
+- /django/db/backends/postgresql/operations.py
+- /django/db/backends/postgresql/schema.py
+
+
 ### Deployment commands
-+ Gunicorn
 ```bash
-gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 10 --worker-class [eventlet|gevent|tornado|gthread] 
+gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 10
 ``` 
-+ Uvicorn
-```bash
-uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --workers 10 --loop [asyncio|uvloop] --no-access-log
-```
-+ Hypercorn
-```bash
-hypercorn core.asgi:application --bind 0.0.0.0:8000 --workers 10 --worker-class [asyncio|uvloop] 
-```
-+ uWSGI
-```bash
-uwsgi --module core.wsgi:application --http 0.0.0.0:8000 --workers 10 --gevent 100 --disable-logging
-```
-+ Bjoern
-```bash
-bjcli core.wsgi -w 10 -i 0.0.0.0 -p 8000
-```
 
 ### Note
-Uncomment DJANGO_ALLOW_ASYNC_UNSAFE in core.wsgi when using gunicorn[tornado]
-
-### Result
-![](./assets/time-per-request.png)
-![](./assets/requests-per-second.png)
-
-### To see full documentation follow this [link](https://medium.com/p/bfe453a6f7ad/edit)
+If you recieve this error on cryptography >= 3.5:
+```bash
+This package requires Rust >=1.48.0.
+```
+You can install Rust according to [this instruction](https://www.digitalocean.com/community/tutorials/install-rust-on-ubuntu-linux).
