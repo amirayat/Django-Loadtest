@@ -54,3 +54,8 @@ If you recieve this error on cryptography >= 3.5:
 This package requires Rust >=1.48.0.
 ```
 You can install Rust according to [this instruction](https://www.digitalocean.com/community/tutorials/install-rust-on-ubuntu-linux).
+
+
+### Result
+![](./assets/cpython-pypy-5k-requests.png)
+![](./assets/cpython-pypy-250k-requests.png)
