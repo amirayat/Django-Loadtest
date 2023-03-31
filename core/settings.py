@@ -98,10 +98,15 @@ DATABASES = {
     'default': {
         'ENGINE': DB_ENGINE,
         'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': DB_HOST,
-        'PORT': DB_PORT,
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'username': DB_USER,
+            'password': DB_PASSWORD,
+            'host': DB_HOST,
+            'port': DB_PORT,
+            'authSource': 'admin',
+            'authMechanism': 'SCRAM-SHA-256'
+        }
     }
 }
 

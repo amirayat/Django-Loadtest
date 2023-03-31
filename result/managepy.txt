@@ -12,8 +12,9 @@ Completed 3000 requests
 Completed 3500 requests
 Completed 4000 requests
 Completed 4500 requests
-apr_socket_recv: Connection reset by peer (104)
-Total of 4933 requests completed
+Completed 5000 requests
+Finished 5000 requests
+
 
 Server Software:        WSGIServer/0.2
 Server Hostname:        127.0.0.1
@@ -23,30 +24,30 @@ Document Path:          /countries/
 Document Length:        220950 bytes
 
 Concurrency Level:      100
-Time taken for tests:   91.631 seconds
-Complete requests:      4933
+Time taken for tests:   382.834 seconds
+Complete requests:      5000
 Failed requests:        0
-Total transferred:      1091519977 bytes
-HTML transferred:       1089946350 bytes
-Requests per second:    53.84 [#/sec] (mean)
-Time per request:       1857.509 [ms] (mean)
-Time per request:       18.575 [ms] (mean, across all concurrent requests)
-Transfer rate:          11632.95 [Kbytes/sec] received
+Total transferred:      1106345000 bytes
+HTML transferred:       1104750000 bytes
+Requests per second:    13.06 [#/sec] (mean)
+Time per request:       7656.670 [ms] (mean)
+Time per request:       76.567 [ms] (mean, across all concurrent requests)
+Transfer rate:          2822.15 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0  256 1003.1      0   31481
-Processing:    27  281 399.5    270   27063
-Waiting:       26  240 398.9    226   27044
-Total:         27  537 1088.9    282   31702
+Connect:        0   19 136.9      0    1026
+Processing:    67 7587 2299.8   7328   39900
+Waiting:       66 6394 2144.7   6167   37731
+Total:         67 7606 2321.7   7348   40908
 
 Percentage of the requests served within a certain time (ms)
-  50%    282
-  66%    313
-  75%    333
-  80%    353
-  90%   1288
-  95%   1357
-  98%   3294
-  99%   3387
- 100%  31702 (longest request)
+  50%   7348
+  66%   8301
+  75%   8905
+  80%   9222
+  90%  10267
+  95%  11204
+  98%  12339
+  99%  13433
+ 100%  40908 (longest request)

@@ -1,10 +1,12 @@
-from django.db import models
+from djongo import models
 
 
 class Country(models.Model):
     """
     class model for world countries
     """
+    _id  = models.ObjectIdField(auto_created=True, primary_key=True, serialize=False, verbose_name='_id')
+    id  = models.IntegerField()
     name = models.CharField(max_length=36)
     iso3 = models.CharField(max_length=3)
     iso2 = models.CharField(max_length=2)

@@ -16,7 +16,7 @@ Completed 5000 requests
 Finished 5000 requests
 
 
-Server Software:        uvicorn
+Server Software:        hypercorn-h11
 Server Hostname:        127.0.0.1
 Server Port:            8000
 
@@ -24,30 +24,30 @@ Document Path:          /countries/
 Document Length:        220950 bytes
 
 Concurrency Level:      100
-Time taken for tests:   29.878 seconds
+Time taken for tests:   126.990 seconds
 Complete requests:      5000
 Failed requests:        0
-Total transferred:      1106330000 bytes
+Total transferred:      1106350000 bytes
 HTML transferred:       1104750000 bytes
-Requests per second:    167.34 [#/sec] (mean)
-Time per request:       597.568 [ms] (mean)
-Time per request:       5.976 [ms] (mean, across all concurrent requests)
-Transfer rate:          36159.91 [Kbytes/sec] received
+Requests per second:    39.37 [#/sec] (mean)
+Time per request:       2539.791 [ms] (mean)
+Time per request:       25.398 [ms] (mean, across all concurrent requests)
+Transfer rate:          8507.94 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.3      0       7
-Processing:    51  592 218.0    566    1311
-Waiting:       50  583 215.3    557    1301
-Total:         53  592 218.0    566    1312
+Connect:        0    0   0.2      0       4
+Processing:    74 2528 3476.4   1774   23027
+Waiting:       74 2522 3469.8   1769   23017
+Total:         74 2528 3476.4   1774   23027
 
 Percentage of the requests served within a certain time (ms)
-  50%    566
-  66%    664
-  75%    734
-  80%    773
-  90%    884
-  95%    986
-  98%   1123
-  99%   1170
- 100%   1312 (longest request)
+  50%   1774
+  66%   2263
+  75%   2544
+  80%   2753
+  90%   3603
+  95%  10518
+  98%  17448
+  99%  19964
+ 100%  23027 (longest request)

@@ -24,30 +24,30 @@ Document Path:          /countries/
 Document Length:        220950 bytes
 
 Concurrency Level:      100
-Time taken for tests:   27.048 seconds
+Time taken for tests:   251.596 seconds
 Complete requests:      5000
 Failed requests:        0
 Total transferred:      1106335000 bytes
 HTML transferred:       1104750000 bytes
-Requests per second:    184.86 [#/sec] (mean)
-Time per request:       540.960 [ms] (mean)
-Time per request:       5.410 [ms] (mean, across all concurrent requests)
-Transfer rate:          39944.02 [Kbytes/sec] received
+Requests per second:    19.87 [#/sec] (mean)
+Time per request:       5031.921 [ms] (mean)
+Time per request:       50.319 [ms] (mean, across all concurrent requests)
+Transfer rate:          4294.21 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.3      0       9
-Processing:    46  534 223.6    500    1588
-Waiting:       43  533 223.3    498    1581
-Total:         46  534 223.6    500    1588
+Connect:        0    0   0.1      0       2
+Processing:    97 4984 420.0   5035    5239
+Waiting:       95 4982 420.0   5034    5238
+Total:         97 4984 419.8   5035    5239
 
 Percentage of the requests served within a certain time (ms)
-  50%    500
-  66%    592
-  75%    657
-  80%    699
-  90%    828
-  95%    963
-  98%   1128
-  99%   1228
- 100%   1588 (longest request)
+  50%   5035
+  66%   5046
+  75%   5054
+  80%   5059
+  90%   5077
+  95%   5098
+  98%   5136
+  99%   5166
+ 100%   5239 (longest request)
