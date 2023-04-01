@@ -1,0 +1,42 @@
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        WSGIServer/0.2
+Server Hostname:        127.0.0.1
+Server Port:            8000
+
+Document Path:          /countries/calculate/
+Document Length:        30 bytes
+
+Concurrency Level:      1
+Time taken for tests:   37.022 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      3390 bytes
+HTML transferred:       300 bytes
+Requests per second:    0.27 [#/sec] (mean)
+Time per request:       3702.167 [ms] (mean)
+Time per request:       3702.167 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.09 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:  3596 3702  87.6   3684    3872
+Waiting:     3595 3702  87.5   3683    3871
+Total:       3596 3702  87.6   3684    3872
+
+Percentage of the requests served within a certain time (ms)
+  50%   3684
+  66%   3690
+  75%   3706
+  80%   3843
+  90%   3872
+  95%   3872
+  98%   3872
+  99%   3872
+ 100%   3872 (longest request)
