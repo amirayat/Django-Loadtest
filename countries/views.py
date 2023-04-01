@@ -1,3 +1,4 @@
+import random
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.viewsets import ReadOnlyModelViewSet
@@ -18,3 +19,15 @@ class CountryListViewSet(ReadOnlyModelViewSet):
 def list_countries(request):
     countries = get_countries()
     return Response(countries)
+
+
+@api_view(['GET'])
+def cpu_bound_task(request):
+    """
+    dummy operation to create a cpu-bound task
+    """
+    total = int()
+    for i in range(1, 10000):
+        for j in range(1, 10000):
+            total += i * j
+    return Response({"final is:":total})
