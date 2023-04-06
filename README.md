@@ -53,4 +53,4 @@ Uncomment DJANGO_ALLOW_ASYNC_UNSAFE in core.wsgi when using gunicorn[tornado]
 ![](./assets/time-per-request.png)
 ![](./assets/requests-per-second.png)
 
-### To see full documentation follow this [link](https://medium.com/p/bfe453a6f7ad/edit)
+### To see full documentation follow this [link](https://medium.com/@amirayat20/which-python-web-server-is-best-suited-to-django-bfe453a6f7ad)
